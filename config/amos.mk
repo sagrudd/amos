@@ -50,8 +50,6 @@ install-bin-scripts-hook: $(dist_bin_SCRIPTS) $(bin_SCRIPTS)
                 echo " configuring acf '$$b'"; \
                 echo '#!$(bindir)/runAmos -C' > "$(DESTDIR)$(bindir)/$$b"; \
                 sed -e 's|^BINDIR[ 	]*=.*$$|BINDIR=$(bindir)|' \
-                    -e 's|^NUCMER[ 	]*=.*$$|NUCMER=$(NUCMER)|' \
-                    -e 's|^DELTAFILTER[        ]*=.*$$|DELTAFILTER=$(DELTAFILTER)|' \
                     "$(DESTDIR)$(bindir)/$$f" >> "$(DESTDIR)$(bindir)/$$b" \
                 || exit 1; \
                 ;; \
