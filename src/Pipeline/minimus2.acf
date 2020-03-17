@@ -41,9 +41,9 @@ OUTPUTS = $(CONTIG) $(FASTA)
 #------------------------------------------------------------------------------#
 
 BINDIR		= /usr/local/bin
-NUCMER		= /usr/local/bin/nucmer
-DELTAFILTER	= /usr/local/bin/delta-filter
-SHOWCOORDS	= /usr/local/bin/show-coords
+NUCMER		= $(BINDIR)/nucmer
+DELTAFILTER	= $(BINDIR)/delta-filter
+SHOWCOORDS	= $(BINDIR)/show-coords
 
 #------------------------------------------------------------------------------#
 
