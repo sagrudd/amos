@@ -26,7 +26,7 @@ QRYSEQ  = $(PREFIX).qry.seq
 ALIGN   = $(PREFIX).delta
 COORDS  = $(PREFIX).coords
 OVLTAB  = $(PREFIX).ovl
-OVLAMOS = $(PREFIX).OVL
+OVLAMOS = $(PREFIX).ovla
 CONTIG  = $(PREFIX).contig
 FASTA   = $(PREFIX).fasta
 
@@ -62,7 +62,7 @@ SHOWCOORDS	= $(BINDIR)/show-coords
 23: $(BINDIR)/ovl2OVL $(OVLTAB)  > $(OVLAMOS)
 
 ## Loading overlaps to the bank
-24: rm -f $(BANK)/OVL.* 
+24: rm -f $(BANK)/ovla.* 
 25: $(BINDIR)/bank-transact -z -b $(BANK) -m $(OVLAMOS)
 
 ## Running contigger
